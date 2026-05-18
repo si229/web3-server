@@ -31,7 +31,7 @@ var (
 
 // BaccaratMetaData contains all meta data concerning the Baccarat contract.
 var BaccaratMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"amount\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"DepositPrize\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"amount\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"Settle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"amount\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"WithdrawPrize\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"bet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"depositPrizePool\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"depositPrizePool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"getPrizePool\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"roundId\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"ID\",\"type\":\"uint64\"}],\"name\":\"setRoundId\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"internalType\":\"int256\",\"name\":\"SettleAmount\",\"type\":\"int256\"},{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"settle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawPrizePool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawPrizePool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"amount\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"DepositPrize\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"amount\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"Settle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"amount\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"balance\",\"type\":\"int256\"}],\"name\":\"WithdrawPrize\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"bet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"depositPrizePool\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"getPrizePool\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"roundId\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"ID\",\"type\":\"uint64\"}],\"name\":\"setRoundId\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"internalType\":\"int256\",\"name\":\"SettleAmount\",\"type\":\"int256\"},{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"}],\"name\":\"settle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"token\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawPrizePool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawPrizePool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
 }
 
 // BaccaratABI is the input ABI used to generate the binding from.
@@ -180,12 +180,12 @@ func (_Baccarat *BaccaratTransactorRaw) Transact(opts *bind.TransactOpts, method
 	return _Baccarat.Contract.contract.Transact(opts, method, params...)
 }
 
-// GetBalance is a free data retrieval call binding the contract method 0x12065fe0.
+// GetBalance is a free data retrieval call binding the contract method 0xe3a12480.
 //
-// Solidity: function getBalance() view returns(int256)
-func (_Baccarat *BaccaratCaller) GetBalance(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function getBalance(uint8 token) view returns(int256)
+func (_Baccarat *BaccaratCaller) GetBalance(opts *bind.CallOpts, token uint8) (*big.Int, error) {
 	var out []interface{}
-	err := _Baccarat.contract.Call(opts, &out, "getBalance")
+	err := _Baccarat.contract.Call(opts, &out, "getBalance", token)
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -197,49 +197,18 @@ func (_Baccarat *BaccaratCaller) GetBalance(opts *bind.CallOpts) (*big.Int, erro
 
 }
 
-// GetBalance is a free data retrieval call binding the contract method 0x12065fe0.
-//
-// Solidity: function getBalance() view returns(int256)
-func (_Baccarat *BaccaratSession) GetBalance() (*big.Int, error) {
-	return _Baccarat.Contract.GetBalance(&_Baccarat.CallOpts)
-}
-
-// GetBalance is a free data retrieval call binding the contract method 0x12065fe0.
-//
-// Solidity: function getBalance() view returns(int256)
-func (_Baccarat *BaccaratCallerSession) GetBalance() (*big.Int, error) {
-	return _Baccarat.Contract.GetBalance(&_Baccarat.CallOpts)
-}
-
-// GetBalance0 is a free data retrieval call binding the contract method 0xe3a12480.
+// GetBalance is a free data retrieval call binding the contract method 0xe3a12480.
 //
 // Solidity: function getBalance(uint8 token) view returns(int256)
-func (_Baccarat *BaccaratCaller) GetBalance0(opts *bind.CallOpts, token uint8) (*big.Int, error) {
-	var out []interface{}
-	err := _Baccarat.contract.Call(opts, &out, "getBalance0", token)
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
+func (_Baccarat *BaccaratSession) GetBalance(token uint8) (*big.Int, error) {
+	return _Baccarat.Contract.GetBalance(&_Baccarat.CallOpts, token)
 }
 
-// GetBalance0 is a free data retrieval call binding the contract method 0xe3a12480.
+// GetBalance is a free data retrieval call binding the contract method 0xe3a12480.
 //
 // Solidity: function getBalance(uint8 token) view returns(int256)
-func (_Baccarat *BaccaratSession) GetBalance0(token uint8) (*big.Int, error) {
-	return _Baccarat.Contract.GetBalance0(&_Baccarat.CallOpts, token)
-}
-
-// GetBalance0 is a free data retrieval call binding the contract method 0xe3a12480.
-//
-// Solidity: function getBalance(uint8 token) view returns(int256)
-func (_Baccarat *BaccaratCallerSession) GetBalance0(token uint8) (*big.Int, error) {
-	return _Baccarat.Contract.GetBalance0(&_Baccarat.CallOpts, token)
+func (_Baccarat *BaccaratCallerSession) GetBalance(token uint8) (*big.Int, error) {
+	return _Baccarat.Contract.GetBalance(&_Baccarat.CallOpts, token)
 }
 
 // GetPrizePool is a free data retrieval call binding the contract method 0xfe09ac4f.
@@ -356,88 +325,46 @@ func (_Baccarat *BaccaratTransactorSession) Bet(token uint8) (*types.Transaction
 	return _Baccarat.Contract.Bet(&_Baccarat.TransactOpts, token)
 }
 
-// Deposit is a paid mutator transaction binding the contract method 0xd0e30db0.
+// Deposit is a paid mutator transaction binding the contract method 0xf4d4c9d7.
 //
-// Solidity: function deposit() payable returns()
-func (_Baccarat *BaccaratTransactor) Deposit(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Baccarat.contract.Transact(opts, "deposit")
+// Solidity: function deposit(uint8 token, uint256 amount) payable returns()
+func (_Baccarat *BaccaratTransactor) Deposit(opts *bind.TransactOpts, token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.contract.Transact(opts, "deposit", token, amount)
 }
 
-// Deposit is a paid mutator transaction binding the contract method 0xd0e30db0.
+// Deposit is a paid mutator transaction binding the contract method 0xf4d4c9d7.
 //
-// Solidity: function deposit() payable returns()
-func (_Baccarat *BaccaratSession) Deposit() (*types.Transaction, error) {
-	return _Baccarat.Contract.Deposit(&_Baccarat.TransactOpts)
+// Solidity: function deposit(uint8 token, uint256 amount) payable returns()
+func (_Baccarat *BaccaratSession) Deposit(token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.Contract.Deposit(&_Baccarat.TransactOpts, token, amount)
 }
 
-// Deposit is a paid mutator transaction binding the contract method 0xd0e30db0.
+// Deposit is a paid mutator transaction binding the contract method 0xf4d4c9d7.
 //
-// Solidity: function deposit() payable returns()
-func (_Baccarat *BaccaratTransactorSession) Deposit() (*types.Transaction, error) {
-	return _Baccarat.Contract.Deposit(&_Baccarat.TransactOpts)
+// Solidity: function deposit(uint8 token, uint256 amount) payable returns()
+func (_Baccarat *BaccaratTransactorSession) Deposit(token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.Contract.Deposit(&_Baccarat.TransactOpts, token, amount)
 }
 
-// Deposit0 is a paid mutator transaction binding the contract method 0xf4d4c9d7.
+// DepositPrizePool is a paid mutator transaction binding the contract method 0xfe6c1826.
 //
-// Solidity: function deposit(uint8 token, uint256 amount) returns()
-func (_Baccarat *BaccaratTransactor) Deposit0(opts *bind.TransactOpts, token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.contract.Transact(opts, "deposit0", token, amount)
+// Solidity: function depositPrizePool(uint8 token, uint256 amount) payable returns()
+func (_Baccarat *BaccaratTransactor) DepositPrizePool(opts *bind.TransactOpts, token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.contract.Transact(opts, "depositPrizePool", token, amount)
 }
 
-// Deposit0 is a paid mutator transaction binding the contract method 0xf4d4c9d7.
+// DepositPrizePool is a paid mutator transaction binding the contract method 0xfe6c1826.
 //
-// Solidity: function deposit(uint8 token, uint256 amount) returns()
-func (_Baccarat *BaccaratSession) Deposit0(token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.Deposit0(&_Baccarat.TransactOpts, token, amount)
+// Solidity: function depositPrizePool(uint8 token, uint256 amount) payable returns()
+func (_Baccarat *BaccaratSession) DepositPrizePool(token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.Contract.DepositPrizePool(&_Baccarat.TransactOpts, token, amount)
 }
 
-// Deposit0 is a paid mutator transaction binding the contract method 0xf4d4c9d7.
+// DepositPrizePool is a paid mutator transaction binding the contract method 0xfe6c1826.
 //
-// Solidity: function deposit(uint8 token, uint256 amount) returns()
-func (_Baccarat *BaccaratTransactorSession) Deposit0(token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.Deposit0(&_Baccarat.TransactOpts, token, amount)
-}
-
-// DepositPrizePool is a paid mutator transaction binding the contract method 0x6d891586.
-//
-// Solidity: function depositPrizePool() payable returns()
-func (_Baccarat *BaccaratTransactor) DepositPrizePool(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Baccarat.contract.Transact(opts, "depositPrizePool")
-}
-
-// DepositPrizePool is a paid mutator transaction binding the contract method 0x6d891586.
-//
-// Solidity: function depositPrizePool() payable returns()
-func (_Baccarat *BaccaratSession) DepositPrizePool() (*types.Transaction, error) {
-	return _Baccarat.Contract.DepositPrizePool(&_Baccarat.TransactOpts)
-}
-
-// DepositPrizePool is a paid mutator transaction binding the contract method 0x6d891586.
-//
-// Solidity: function depositPrizePool() payable returns()
-func (_Baccarat *BaccaratTransactorSession) DepositPrizePool() (*types.Transaction, error) {
-	return _Baccarat.Contract.DepositPrizePool(&_Baccarat.TransactOpts)
-}
-
-// DepositPrizePool0 is a paid mutator transaction binding the contract method 0xfe6c1826.
-//
-// Solidity: function depositPrizePool(uint8 token, uint256 amount) returns()
-func (_Baccarat *BaccaratTransactor) DepositPrizePool0(opts *bind.TransactOpts, token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.contract.Transact(opts, "depositPrizePool0", token, amount)
-}
-
-// DepositPrizePool0 is a paid mutator transaction binding the contract method 0xfe6c1826.
-//
-// Solidity: function depositPrizePool(uint8 token, uint256 amount) returns()
-func (_Baccarat *BaccaratSession) DepositPrizePool0(token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.DepositPrizePool0(&_Baccarat.TransactOpts, token, amount)
-}
-
-// DepositPrizePool0 is a paid mutator transaction binding the contract method 0xfe6c1826.
-//
-// Solidity: function depositPrizePool(uint8 token, uint256 amount) returns()
-func (_Baccarat *BaccaratTransactorSession) DepositPrizePool0(token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.DepositPrizePool0(&_Baccarat.TransactOpts, token, amount)
+// Solidity: function depositPrizePool(uint8 token, uint256 amount) payable returns()
+func (_Baccarat *BaccaratTransactorSession) DepositPrizePool(token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.Contract.DepositPrizePool(&_Baccarat.TransactOpts, token, amount)
 }
 
 // SetRoundId is a paid mutator transaction binding the contract method 0x1d3c8b6e.
@@ -503,46 +430,25 @@ func (_Baccarat *BaccaratTransactorSession) TransferOwnership(newOwner common.Ad
 	return _Baccarat.Contract.TransferOwnership(&_Baccarat.TransactOpts, newOwner)
 }
 
-// Withdraw is a paid mutator transaction binding the contract method 0x2e1a7d4d.
-//
-// Solidity: function withdraw(uint256 amount) payable returns()
-func (_Baccarat *BaccaratTransactor) Withdraw(opts *bind.TransactOpts, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.contract.Transact(opts, "withdraw", amount)
-}
-
-// Withdraw is a paid mutator transaction binding the contract method 0x2e1a7d4d.
-//
-// Solidity: function withdraw(uint256 amount) payable returns()
-func (_Baccarat *BaccaratSession) Withdraw(amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.Withdraw(&_Baccarat.TransactOpts, amount)
-}
-
-// Withdraw is a paid mutator transaction binding the contract method 0x2e1a7d4d.
-//
-// Solidity: function withdraw(uint256 amount) payable returns()
-func (_Baccarat *BaccaratTransactorSession) Withdraw(amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.Withdraw(&_Baccarat.TransactOpts, amount)
-}
-
-// Withdraw0 is a paid mutator transaction binding the contract method 0x3f489914.
+// Withdraw is a paid mutator transaction binding the contract method 0x3f489914.
 //
 // Solidity: function withdraw(uint8 token, uint256 amount) payable returns()
-func (_Baccarat *BaccaratTransactor) Withdraw0(opts *bind.TransactOpts, token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.contract.Transact(opts, "withdraw0", token, amount)
+func (_Baccarat *BaccaratTransactor) Withdraw(opts *bind.TransactOpts, token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.contract.Transact(opts, "withdraw", token, amount)
 }
 
-// Withdraw0 is a paid mutator transaction binding the contract method 0x3f489914.
+// Withdraw is a paid mutator transaction binding the contract method 0x3f489914.
 //
 // Solidity: function withdraw(uint8 token, uint256 amount) payable returns()
-func (_Baccarat *BaccaratSession) Withdraw0(token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.Withdraw0(&_Baccarat.TransactOpts, token, amount)
+func (_Baccarat *BaccaratSession) Withdraw(token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.Contract.Withdraw(&_Baccarat.TransactOpts, token, amount)
 }
 
-// Withdraw0 is a paid mutator transaction binding the contract method 0x3f489914.
+// Withdraw is a paid mutator transaction binding the contract method 0x3f489914.
 //
 // Solidity: function withdraw(uint8 token, uint256 amount) payable returns()
-func (_Baccarat *BaccaratTransactorSession) Withdraw0(token uint8, amount *big.Int) (*types.Transaction, error) {
-	return _Baccarat.Contract.Withdraw0(&_Baccarat.TransactOpts, token, amount)
+func (_Baccarat *BaccaratTransactorSession) Withdraw(token uint8, amount *big.Int) (*types.Transaction, error) {
+	return _Baccarat.Contract.Withdraw(&_Baccarat.TransactOpts, token, amount)
 }
 
 // WithdrawPrizePool is a paid mutator transaction binding the contract method 0x02f97038.
