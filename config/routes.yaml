@@ -30,6 +30,12 @@ routes:
   - method: POST
     path: /api/web/getDepositData
     handler: getDepositData  
+  
+  - method: POST
+    path: /api/web/getWithdrawData
+    handler: getWithdrawData 
+  
+    
     
 
   

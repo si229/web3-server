@@ -37,7 +37,34 @@ func GetDepositData(c *gin.Context) {
 			"data": "Invalid symbol",
 		})
 	}
+}
 
+func GetWithdrawData(c *gin.Context) {
+	var req request.WithdrawDataReq
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+
+	if token, ok := config.SymbolToken[req.Symbol]; ok {
+		withdrawAmount := utils.ToTokenUnits(req.Amount, config.TokenDecimals[req.Symbol])
+		if data, err := web3.ContractAbi.Pack("withdraw", token, withdrawAmount); err == nil {
+			c.JSON(http.StatusOK, gin.H{
+				"data": "0x" + BytesToHex(data),
+			})
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"error": err.Error(),
+			})
+		}
+
+	} else {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"data": "Invalid symbol",
+		})
+	}
 }
 
 func BytesToHex(data []byte) string {

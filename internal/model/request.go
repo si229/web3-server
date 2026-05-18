@@ -39,3 +39,8 @@ type DepositDataReq struct {
 	Symbol string  `json:"symbol"`
 	Amount float64 `json:"amount"`
 }
+
+type WithdrawDataReq struct {
+	Symbol string  `json:"symbol"`
+	Amount float64 `json:"amount"`
+}

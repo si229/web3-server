@@ -17,6 +17,7 @@ func RegisterRoutes(r *gin.Engine, cfg *config.Config) {
 		"addressValidate":    handlers.AddressValidate,
 		"withdraw":           handlers.Withdraw,
 		"getDepositData":     handlers.GetDepositData,
+		"getWithdrawData":    handlers.GetWithdrawData,
 	}
 
 	for _, route := range cfg.Routes {
