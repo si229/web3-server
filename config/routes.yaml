@@ -1,0 +1,35 @@
+routes:
+  - method: GET
+    path: /login/genVerifyParam
+    handler: genVerifyParam  
+  
+  - method: POST
+    path: /login/addressValidate
+    handler: addressValidate  
+
+  - method: POST
+    path: /login/verifySignature
+    handler: verifySignature   
+  
+  - method: POST
+    path: /api/wallet/deposit
+    handler: deposit   
+
+  - method: POST
+    path: /api/wallet/withdraw
+    handler: withdraw  
+
+  - method: POST
+    path: /api/wallet/getBalance
+    handler: getBalance  
+
+  - method: POST
+    path: /api/wallet/getContractBalance
+    handler: getContractBalance  
+
+  - method: POST
+    path: /api/web/getDepositData
+    handler: getDepositData  
+    
+
+  
