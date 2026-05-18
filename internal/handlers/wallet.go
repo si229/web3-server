@@ -38,25 +38,14 @@ func Deposit(c *gin.Context) {
 
 	if req.Symbol == "ETH" {
 		auth.Value = tokenAmount
-		_, err := blockchain.GetBaccarat().HTTP.Deposit(auth)
-		if err != nil {
-			logger.Log.Info().Msgf("deposit  error %+v", err)
-			c.JSON(400, gin.H{"error": err.Error()})
-		} else {
-			logger.Log.Info().Msgf("deposit %f", utils.ToEth(auth.Value))
-			c.JSON(200, gin.H{"data": "ok"})
-		}
-	} else {
-		_, err := blockchain.GetBaccarat().HTTP.Deposit0(auth, config.SymbolToken[req.Symbol], tokenAmount)
-		if err != nil {
-			c.JSON(200, gin.H{"data": "fail"})
-		} else {
-			logger.Log.Info().Msgf("deposit %f", utils.ToEth(auth.Value))
-			c.JSON(200, gin.H{"data": "ok"})
-		}
-
 	}
 
+	if tx, err := blockchain.GetBaccarat().HTTP.Deposit(auth, config.SymbolToken[req.Symbol], tokenAmount); err != nil {
+		c.JSON(200, gin.H{"error": err.Error()})
+	} else {
+		logger.Log.Info().Msgf("deposit %f %s", req.Amount, tx.Hash().Hex())
+		c.JSON(200, gin.H{"data": "ok"})
+	}
 }
 
 func Withdraw(c *gin.Context) {
@@ -73,7 +62,7 @@ func Withdraw(c *gin.Context) {
 
 	token := config.SymbolToken[req.Symbol]
 	tokenAmount := utils.ToTokenUnits(req.Amount, config.TokenDecimals[req.Symbol])
-	tx, err := blockchain.GetBaccarat().HTTP.Withdraw0(auth, token, tokenAmount)
+	tx, err := blockchain.GetBaccarat().HTTP.Withdraw(auth, token, tokenAmount)
 	if err != nil {
 		logger.Log.Info().Msgf("withdraw error:%s+v", err)
 		c.JSON(200, gin.H{"error": err.Error()})
@@ -94,7 +83,7 @@ func GetBalance(c *gin.Context) {
 
 	token := config.SymbolToken[req.Symbol]
 
-	bal, err := blockchain.GetBaccarat().HTTP.GetBalance0(
+	bal, err := blockchain.GetBaccarat().HTTP.GetBalance(
 		&bind.CallOpts{From: common.HexToAddress(req.Address)}, token)
 
 	if err != nil {

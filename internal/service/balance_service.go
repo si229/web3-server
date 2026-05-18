@@ -30,7 +30,7 @@ func HandleUpdateBalance(player common.Address, token uint8, instance *contract.
 }
 
 func getBalanceFromContract(player common.Address, token uint8, instance *contract.Baccarat) (*big.Int, error) {
-	bal, err := instance.GetBalance0(&bind.CallOpts{From: player}, token)
+	bal, err := instance.GetBalance(&bind.CallOpts{From: player}, token)
 	if err != nil {
 		return big.NewInt(0), err
 	}
